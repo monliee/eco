@@ -1,4 +1,5 @@
 import 'package:eco/pages/detail_chat_page.dart';
+import 'package:eco/pages/edit_profile_page.dart';
 import 'package:eco/pages/home/main_page.dart';
 import 'package:eco/pages/sign_in_page.dart';
 import 'package:eco/pages/sign_up_page.dart';
@@ -17,13 +18,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true,
       routes: {
         '/': (context) => const SplashPage(),
         '/sign-in': (context) => const SignInPage(),
         '/sign-up': (context) => const SignUpPage(),
         '/home': (context) => const MainPage(),
         '/detail-chat': (context) => const DetailChatPage(),
+        '/edit-profile': (context) => const EditProfilePage(),
       },
     );
   }

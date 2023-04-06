@@ -32,12 +32,26 @@ class WishlistCard extends StatelessWidget {
           const SizedBox(
             width: 12,
           ),
-          Column(
-            children: const [
-              Text(
-                'Arcane Shoes',
-              ),
-            ],
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Arcane Shoes',
+                  style: primaryTextStyle.copyWith(
+                    fontWeight: semibold,
+                  ),
+                ),
+                Text(
+                  '\$143,98',
+                  style: priceTextStyle,
+                ),
+              ],
+            ),
+          ),
+          Image.asset(
+            'assets/btn_wishlist.png',
+            width: 34,
           ),
         ],
       ),
