@@ -51,7 +51,69 @@ class EditProfilePage extends StatelessWidget {
             TextFormField(
               style: primaryTextStyle,
               decoration: InputDecoration(
-                hintText: 'Rigumonlie',
+                hintText: 'Rio',
+                hintStyle: primaryTextStyle,
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: subtitleColor,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget usernameInput() {
+      return Container(
+        margin: const EdgeInsets.only(
+          top: 30,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Username',
+              style: secondaryTextStyle.copyWith(
+                fontSize: 13,
+              ),
+            ),
+            TextFormField(
+              style: primaryTextStyle,
+              decoration: InputDecoration(
+                hintText: '@rigumonlie',
+                hintStyle: primaryTextStyle,
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: subtitleColor,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget emailInput() {
+      return Container(
+        margin: const EdgeInsets.only(
+          top: 30,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Email Address',
+              style: secondaryTextStyle.copyWith(
+                fontSize: 13,
+              ),
+            ),
+            TextFormField(
+              style: primaryTextStyle,
+              decoration: InputDecoration(
+                hintText: 'rigumonlie@gmail.com',
                 hintStyle: primaryTextStyle,
                 enabledBorder: UnderlineInputBorder(
                   borderSide: BorderSide(
@@ -90,6 +152,8 @@ class EditProfilePage extends StatelessWidget {
               ),
             ),
             nameInput(),
+            usernameInput(),
+            emailInput(),
           ],
         ),
       );
@@ -99,6 +163,7 @@ class EditProfilePage extends StatelessWidget {
       backgroundColor: bgColor3,
       appBar: header(),
       body: content(),
+      resizeToAvoidBottomInset: false,
     );
   }
 }
