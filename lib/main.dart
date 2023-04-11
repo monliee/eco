@@ -1,5 +1,6 @@
 import 'package:eco/pages/card_page.dart';
 import 'package:eco/pages/checkout_page.dart';
+import 'package:eco/pages/checkout_success_page.dart';
 import 'package:eco/pages/detail_chat_page.dart';
 import 'package:eco/pages/edit_profile_page.dart';
 import 'package:eco/pages/home/main_page.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/product': (context) => const ProductPage(),
         '/cart': (context) => const CartPage(),
         '/checkout': (context) => const CheckoutPage(),
+        '/checkout-success': (context) => const CheckoutSuccessPage(),
       },
     );
   }
